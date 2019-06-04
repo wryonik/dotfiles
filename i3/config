@@ -98,7 +98,7 @@ set $ws1 "1 Terminals "
 set $ws2 "2 Browsers "
 set $ws3 "3 Editors "
 set $ws4 "4 File Explorers "
-set $ws5 "5"
+set $ws5 "5 Media "
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -137,6 +137,7 @@ assign [class="Gedit"] $ws3
 assign [class="Code"] $ws3
 assign [class="Sublime_text"] $ws3
 assign [class="Nautilus"] $ws4
+assign [class="vlc"] $ws5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
