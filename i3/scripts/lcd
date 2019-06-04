@@ -1,0 +1,23 @@
+#!/bin/bash
+value=`cat /sys/class/backlight/intel_backlight/brightness | awk '{print int($1+0.5)}'`
+max=`cat /sys/class/backlight/intel_backlight/max_brightness`
+step=$((max / 10))
+action=$1
+if [ "$action" == "inc" ]
+then
+	temp=$((max - step))
+	if [ "$value" -lt "$temp" ]
+	then
+		((value += step))
+		echo "$value" > /sys/class/backlight/intel_backlight/brightness
+	fi
+fi
+
+if [ "$action" == "dec" ]
+then
+	if [ "$value" -gt "$step" ]
+	then
+		((value -= step))
+		echo "$value" > /sys/class/backlight/intel_backlight/brightness
+	fi
+fi
