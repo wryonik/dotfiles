@@ -1,5 +1,7 @@
 For brightness controls
 make a xorg.conf file in /etc/X11/
+
+
 `Section "Device"
     Identifier  "0x42"
     Driver      "intel"
