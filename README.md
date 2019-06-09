@@ -4,9 +4,13 @@ make a xorg.conf file in /etc/X11/
 
 `
 Section "Device"
+
     Identifier  "0x42"
+
     Driver      "intel"
+
     Option      "Backlight"  "intel_backlight"
+
 EndSection
 `
 
