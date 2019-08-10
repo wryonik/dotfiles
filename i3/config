@@ -81,7 +81,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+f floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -138,6 +138,8 @@ assign [class="Code"] $ws3
 assign [class="Sublime_text"] $ws3
 assign [class="Nautilus"] $ws4
 assign [class="vlc"] $ws5
+assign [class="X-terminal-emulator"] $ws1
+assign [class="Rhythmbox"] $ws5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -211,7 +213,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id nm-applet
-exec --no-startup-id feh --recursive --randomize --bg-fill /home/savitar/Music/1920-x-1080-wallpapers-2.jpg
+exec --no-startup-id feh --recursive --randomize --bg-fill /home/savitar/Music/System76-Robot-by_Kate_Hazen_of_System76-6a622a6686.png
 exec_always compton -f
 
 bindsym $mod+Shift+x exec /home/savitar/.config/i3/locker.sh
