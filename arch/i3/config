@@ -36,7 +36,8 @@ bindsym $mod+Return exec terminator
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec ~/.config/i3/rofi
+bindsym $mod+shift+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -207,6 +208,8 @@ gaps outer 15
 
 smart_gaps on
 
+border_radius 5
+
 #smart_borders enable
 new_window none
 for_window [class="^.*"] border pixel 1
@@ -232,7 +235,8 @@ bindsym XF86MonBrightnessDown exec ~/.config/i3/backlight dec 10
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id nm-applet
-exec --no-startup-id feh --recursive --randomize --bg-fill /home/shadow/Pictures/wallpapers/firewatch8.jpg
+exec --no-startup-id blueman-applet
+exec --no-startup-id feh --recursive --randomize --bg-fill /home/shadow/Pictures/wallpapers/1920-x-1080-wallpapers-2.jpg
 exec_always compton -f
 
 
@@ -247,6 +251,10 @@ bindsym Ctrl+Shift+Print exec escrotum --clipboard --select --selection-delay 30
 bindsym $mod+Shift+x exec betterlockscreen -l
 
 # Enable tapping from touchpad
-exec xinput set-prop 12 305 1 #see device_id and prop_id by xinput list
-exec xinput set-prop 12 297 1
-exec xinput set-prop 12 288 1
+exec xinput set-prop 12 299 1 #see device_id and prop_id by xinput list
+exec xinput set-prop 12 307 1
+
+# Position the gsimplecal
+for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move down 20 px, move left 20px
+bindsym $mod+c exec gsimplecal
+
