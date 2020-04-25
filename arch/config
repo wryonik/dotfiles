@@ -134,12 +134,14 @@ assign [class="Terminator"] $ws1
 assign [class="URxvt"] $ws1
 assign [class="firefox"] $ws2
 assign [class="Chromium"] $ws2
+assign [class="Brave-browser"] $ws2
 assign [class="Gedit"] $ws3
 assign [class="code"] $ws3
 assign [class="Org.gnome.Nautilus"] $ws4
-assign [class="Sublime_text"] $ws3
+assign [class="Subl3"] $ws3
 assign [class="vlc"] $ws5
 assign [class="X-terminal-emulator"] $ws1
+assign [class="Spotify Free"] $ws5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -178,8 +180,8 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks -c /home/shadow/.config/i3/i3blocks.conf
-        font pango:System San Francisco Display 12
+        status_command i3blocks -c /home/savitar/.config/i3/i3blocks.conf
+        font pango:System San Francisco Display 11
 	colors {
 		separator #757575
 		#                  border             background         text
@@ -203,8 +205,8 @@ client.background       #ffffff
 hide_edge_borders both
 
 # Gaps
-gaps inner 15
-gaps outer 15
+gaps inner 10
+gaps outer 10
 
 smart_gaps on
 
@@ -236,7 +238,8 @@ exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
-exec --no-startup-id feh --recursive --randomize --bg-fill /home/shadow/Pictures/wallpapers/1920-x-1080-wallpapers-2.jpg
+exec --no-startup-id feh --recursive --randomize --bg-fill /home/savitar/Pictures/wallpapers/wallhaven-lmjgpr.jpg
+exec --no-startup-id libinput-gestures-setup start
 exec_always compton -f
 
 
@@ -251,10 +254,14 @@ bindsym Ctrl+Shift+Print exec escrotum --clipboard --select --selection-delay 30
 bindsym $mod+Shift+x exec betterlockscreen -l
 
 # Enable tapping from touchpad
-exec xinput set-prop 12 299 1 #see device_id and prop_id by xinput list
-exec xinput set-prop 12 307 1
+exec xinput set-prop 12 303 1 #see device_id and prop_id by xinput list
+exec xinput set-prop 12 311 1
 
-# Position the gsimplecal
-for_window [class="(?i)gsimplecal"] floating enable, move position mouse, move down 20 px, move left 20px
-bindsym $mod+c exec gsimplecal
+bindsym $Mod+Tab workspace back_and_forth
 
+# Dmenu for network-manager
+bindsym $mod+n  exec networkmanager_dmenu
+
+# Enable real-time detetion of numlock and caps locks keypress
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
