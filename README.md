@@ -25,3 +25,4 @@ To enable natural scrolling
 
 change the property_number (in my case it is 282) in config file
 
+If nm-applet freezes, remove dunst. Also in the current setup, I had masked systemd-journal-flush.service so that it will not run on startup.
