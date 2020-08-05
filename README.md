@@ -6,6 +6,12 @@
 * Menu: rofi
 * Lock Screen: betterlockscreen
 
+## Installation
+
+For installing all the packages, run
+
+```./install.sh```
+
 ## Screenshots
 
 ![alt text](./images/pic2.png)
