@@ -7,7 +7,8 @@
 * Lock Screen: betterlockscreen
 
 Custom theme is used for spotify using spicetify-cli
-Theme - [Dribbblish](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Dribbblish)
+
+* Theme - [Dribbblish](https://github.com/morpheusthewhite/spicetify-themes/tree/master/Dribbblish)
 
 ## Installation
 
