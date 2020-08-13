@@ -2,7 +2,7 @@
 
 * OS: Arch Linux
 * WM: i3-rounded-gaps
-* Status Bar: i3-blocks
+* Status Bar: polybar
 * Menu: rofi
 * Lock Screen: betterlockscreen
 
