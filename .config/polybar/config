@@ -48,7 +48,7 @@ padding-right = 2
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=11;2
+font-0 = fixed:pixelsize=11;3
 font-1 = unifont:fontformat=truetype:size=10:antialias=false;3
 font-2 = FontAwesome:pixelsize=12;3
 font-3 = Font Awesome 5 Free:pixelsize=11;3
@@ -60,7 +60,9 @@ modules-center =
 modules-right = filesystem xbacklight pulseaudio memory cpu wlan eth wlan-network-speed eth-network-speed battery temperature date pac-update powermenu
 
 tray-position = right
-tray-padding = 2
+tray-padding-left = 3
+
+
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
