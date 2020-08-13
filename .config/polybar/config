@@ -23,7 +23,7 @@ background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #ffb52a
+primary = #003cff
 secondary = #e60053
 alert = #bd2c40
 
@@ -57,7 +57,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=15;3
 
 modules-left = i3
 modules-center = 
-modules-right = filesystem xbacklight pulseaudio memory cpu wlan eth wlan-network-speed eth-network-speed battery temperature date pac-update powermenu
+modules-right = filesystem xbacklight pulseaudio memory cpu protonvpn wlan eth wlan-network-speed eth-network-speed battery temperature date pac-update powermenu
 
 tray-position = right
 tray-padding-left = 3
@@ -81,6 +81,11 @@ cursor-click = pointer
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
+
+[module/protonvpn]
+type = custom/script
+exec = .config/polybar/scripts/polybar-protonvpn.sh
+interval = 5
 
 [module/filesystem]
 type = internal/fs
