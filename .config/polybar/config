@@ -57,7 +57,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=15;3
 
 modules-left = i3
 modules-center = 
-modules-right = filesystem xbacklight pulseaudio memory cpu protonvpn wlan eth wlan-network-speed eth-network-speed battery temperature date pac-update powermenu
+modules-right = xbacklight pulseaudio memory cpu filesystem wlan eth wlan-network-speed eth-network-speed battery temperature date pac-update powermenu
 
 tray-position = right
 tray-padding-left = 3
@@ -189,7 +189,7 @@ interface = wlo1
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%
+label-connected = %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -323,14 +323,14 @@ menu-0-2-exec = menu-open-2
 
 menu-1-0 = "   Reboot     "
 menu-1-0-foreground = #fba922
-menu-1-0-exec = sudo reboot
+menu-1-0-exec = reboot
 menu-1-1 = Cancel
 menu-1-1-foreground = #fba922
 menu-1-1-exec = menu-open-0
 
 menu-2-0 = "   Power off     "
 menu-2-0-foreground = #fba922
-menu-2-0-exec = sudo poweroff
+menu-2-0-exec = poweroff
 menu-2-1 = Cancel
 menu-2-1-foreground = #fba922
 menu-2-1-exec = menu-open-0
