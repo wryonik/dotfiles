@@ -227,7 +227,7 @@ time-alt = %I:%M:%S
 
 format-prefix-foreground = ${colors.foreground-alt}
 
-label =  %date% %time%
+label =  %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
