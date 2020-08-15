@@ -36,6 +36,8 @@ height = 30
 ;offset-y = 1%
 fixed-center = false
 
+enable-ipc = true
+
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -57,11 +59,10 @@ font-5 = Font Awesome 5 Brands:pixelsize=15;3
 
 modules-left = i3
 modules-center = 
-modules-right = xbacklight pulseaudio memory cpu filesystem wlan eth wlan-network-speed eth-network-speed battery temperature date pac-update powermenu
+modules-right = xbacklight pulseaudio output-device memory cpu filesystem wlan eth wlan-network-speed eth-network-speed battery temperature date pac-update powermenu
 
 tray-position = right
 tray-padding-left = 3
-
 
 ;tray-background = #0063ff
 
@@ -231,11 +232,11 @@ label =  %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
+interval = 5
 
 format-volume = <label-volume> <bar-volume>
 label-volume =   
 label-volume-foreground = ${root.foreground}
-
 label-muted =  
 
 bar-volume-width = 10
@@ -348,6 +349,11 @@ exec = checkupdates | wc -l
 label =  " %output%"
 interval = 3600
 format-prefix =  
+
+[module/output-device]
+type = custom/script
+exec = ~/.config/polybar/scripts/sound-output-device.sh
+interval = 3
 
 [module/wlan-network-speed]
 type= internal/network
