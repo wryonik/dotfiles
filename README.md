@@ -22,8 +22,6 @@ For installing all the packages, run
 
 ![alt text](./images/pic5.png)
 
-![alt text](./images/pic3.png)
-
 ![alt text](./images/pic1.png)
 
 LockScreen
