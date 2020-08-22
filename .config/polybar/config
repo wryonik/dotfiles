@@ -59,7 +59,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=15;3
 
 modules-left = i3
 modules-center = 
-modules-right = xbacklight pulseaudio output-device memory cpu filesystem wlan eth wlan-network-speed eth-network-speed battery temperature date pac-update powermenu
+modules-right = xbacklight pulseaudio output-device memory cpu filesystem wlan-network-speed eth-network-speed battery date pac-update powermenu
 
 tray-position = right
 tray-padding-left = 3
@@ -184,37 +184,37 @@ interval = 2
 format-prefix = " "
 label = %percentage_used%%
 
-[module/wlan]
-type = internal/network
-interface = wlo1
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-
-[module/eth]
-type = internal/network
-interface = eno1
-interval = 3.0
-
-format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+;[module/wlan]
+;type = internal/network
+;interface = wlo1
+;interval = 3.0
+;
+;format-connected = <ramp-signal> <label-connected>
+;label-connected = %local_ip%
+;
+;format-disconnected =
+;;format-disconnected = <label-disconnected>
+;;format-disconnected-underline = ${self.format-connected-underline}
+;;label-disconnected = %ifname% disconnected
+;;label-disconnected-foreground = ${colors.foreground-alt}
+;
+;ramp-signal-0 = 
+;
+;[module/eth]
+;type = internal/network
+;interface = eno1
+;interval = 3.0
+;
+;format-connected-underline = #55aa55
+;format-connected-prefix = " "
+;format-connected-prefix-foreground = ${colors.foreground-alt}
+;label-connected = %local_ip%
+;
+;format-disconnected =
+;;format-disconnected = <label-disconnected>
+;;format-disconnected-underline = ${self.format-connected-underline}
+;;label-disconnected = %ifname% disconnected
+;;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
@@ -288,21 +288,21 @@ animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-framerate = 750
 
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
-
-format = <ramp> <label>
-format-warn = <ramp> <label-warn>
-
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+;[module/temperature]
+;type = internal/temperature
+;thermal-zone = 0
+;warn-temperature = 60
+;
+;format = <ramp> <label>
+;format-warn = <ramp> <label-warn>
+;
+;label = %temperature-c%
+;label-warn = %temperature-c%
+;label-warn-foreground = ${colors.secondary}
+;
+;ramp-0 = 
+;ramp-1 = 
+;ramp-2 = 
 
 [module/powermenu]
 type = custom/menu
@@ -358,7 +358,7 @@ interval = 3
 [module/wlan-network-speed]
 type= internal/network
 interface = wlo1
-interval = 3.0
+interval = 1.0
 
 format-connected = <label-connected>
 label-connected =  %downspeed%  %upspeed% 
@@ -366,7 +366,7 @@ label-connected =  %downspeed%  %upspeed%
 [module/eth-network-speed]
 type= internal/network
 interface = eno1
-interval = 3.0
+interval = 1.0
 
 format-connected = <label-connected>
 label-connected =  %downspeed%  %upspeed% 
