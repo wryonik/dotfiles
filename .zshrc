@@ -153,12 +153,20 @@ alias gs='git status '
 alias ga='git add '
 alias gb='git branch '
 alias gc='git commit'
-alias gd='git diff'
 alias gco='git checkout '
 alias gpl="git pull"
-alias commit="~/comp_commit.sh"
+alias commit="~/scripts/comp_commit.sh"
+alias rm='rm -i'
+alias chmod='chmod --preserve-root'
+alias chown='chown --preserve-root'
+alias gd="git diff | diff-so-fancy"
 
 ngrok_start() {
 	~/Downloads/ngrok-stable-linux-amd64/ngrok http $1 -host-header="localhost:$1"
 }
+
+setopt PROMPT_SP
+export PROMPT_EOL_MARK=""
+
+source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 

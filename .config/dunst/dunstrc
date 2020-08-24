@@ -29,7 +29,7 @@
     icon_folders = /usr/share/icons/Notifications
     max_icon_size = 70
     corner_radius = 50
-    #separator_color = auto
+    separator_color = "Transparent"
     mouse_left_click = do_action
  
 [frame]
@@ -58,9 +58,14 @@
     timeout = 5
  
 [Discord]
-    appname = Discord Canary
+    appname = Discord
     format = "<b>%s</b>\n%b"
-    new_icon = Discord
+    #new_icon = Discord
+
+[TelegramDesktop]
+    appname = *elegram*
+    format = "<b>%s</b>\n%b"
+    #new_icon = Telegram
  
 [WMail]
     appname = Electron
@@ -76,7 +81,7 @@
     timeout = 10
 
 [spotify]
-    appname = Spotify
+    appname = "Spotify AdKiller"
     format = "<b>Now Playing:</b>\n%s\n%b"
     #new_icon = Spotify
     timeout = 10
