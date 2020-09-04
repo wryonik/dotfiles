@@ -66,6 +66,11 @@
     appname = *elegram*
     format = "<b>%s</b>\n%b"
     #new_icon = Telegram
+
+[Slack]
+    appname = *lack*
+    format = "<b>%s</b>\n%b"
+    new_icon = Slack
  
 [WMail]
     appname = Electron

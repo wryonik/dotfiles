@@ -138,6 +138,7 @@ assign [class="Brave-browser"] $ws2
 assign [class="Gedit"] $ws3
 assign [class="Code"] $ws3
 assign [class="Org.gnome.Nautilus"] $ws4
+assign [class="Microsoft Teams - Preview"] $ws4
 assign [class="Subl3"] $ws3
 assign [class="vlc"] $ws5
 assign [class="X-terminal-emulator"] $ws1
@@ -147,6 +148,7 @@ assign [class="Slack"] $ws6
 assign [class="discord"] $ws6
 for_window [class="Spotify"] move --no-auto-back-and-forth to workspace $ws5
 for_window [class="Gnome-calculator"] floating enable
+for_window [class="Microsoft Teams Notification"] floating enable
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -281,3 +283,11 @@ bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 bindcode --release 248 exec betterlockscreen -l
+
+# Open calculator
+bindsym $mod+c exec gnome-calculator
+bindsym $mod+b exec brave
+
+# Changes the default window title to only class name
+for_window [class=".*"] title_format "%class"
+

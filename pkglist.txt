@@ -1,5 +1,6 @@
 acpi
 adobe-source-han-sans-cn-fonts
+aircrack-ng
 amtk
 android-file-transfer
 android-tools
@@ -58,6 +59,7 @@ gnome-calculator
 gnome-disk-utility
 gnome-keyring
 gnome-video-effects
+gobuster-git
 gotop
 gparted
 grex
@@ -78,6 +80,7 @@ jbig2dec
 jdk-openjdk
 jdk8-openjdk
 jmtpfs
+john
 jre-openjdk
 jre8-openjdk
 lib32-faudio
@@ -117,6 +120,7 @@ man-pages
 mariadb
 maven
 mesa-demos
+metasploit
 mlocate
 mongodb-compass
 mtpfs
