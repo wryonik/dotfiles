@@ -161,6 +161,9 @@ alias chmod='chmod --preserve-root'
 alias chown='chown --preserve-root'
 alias gd="git diff | diff-so-fancy"
 alias ctf-tools="cd /home/savitar/Desktop/ctf-tools"
+alias thm="sudo openvpn /home/savitar/Downloads/axx.ovpn"
+alias htb="sudo openvpn /home/savitar/Downloads/axx8856-startingpoint.ovpn"
+alias temp="code ~/temp1"
 
 ngrok_start() {
 	~/Downloads/ngrok-stable-linux-amd64/ngrok http $1 -host-header="localhost:$1"

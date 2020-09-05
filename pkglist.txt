@@ -46,6 +46,7 @@ firefox
 flashplugin
 flex
 foremost
+freerdp
 gcc
 gdb
 geckodriver
