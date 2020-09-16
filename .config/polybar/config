@@ -57,14 +57,6 @@ font-3 = Font Awesome 5 Free:pixelsize=11;3
 font-4 = Font Awesome 5 Free Solid:pixelsize=11;1
 font-5 = Font Awesome 5 Brands:pixelsize=15;3
 
-
-font-6 = "Fantasque Sans Mono:pixelsize=10;2"
-font-7 = "Iosevka Nerd Font Mono:pixelsize=22;4"
-font-8 = "Iosevka Nerd Font Mono:pixelsize=13;2"
-font-9 = "Iosevka Nerd Font Mono:pixelsize=12;4"
-
-
-
 modules-left = i3
 modules-center = 
 modules-right = xbacklight pulseaudio output-device memory cpu filesystem wlan-network-speed eth-network-speed battery date pac-update powermenu
