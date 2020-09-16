@@ -26,35 +26,36 @@
     dmenu = /usr/bin/dmenu -p dunst
     browser = /usr/bin/google-chrome-beta -new-tab
     icon_position = left
-    icon_folders = /usr/share/icons/Notifications
+    icon_folders = /usr/share/icons/Notifications:/home/savitar/.config/dunst/icons
     max_icon_size = 70
-    corner_radius = 50
-    separator_color = "Transparent"
+    corner_radius = 10
+    separator_color = auto
     mouse_left_click = do_action
+    history_length = 20
  
 [frame]
-    color = "#ffffff"
-    width = 0
+    color = "#1D1F28"
+    width = 5
  
 [shortcuts]
     close = ctrl+space
     close_all = ctrl+shift+space
     context = ctrl+shift+period
-    history = ctrl+shift 
+    history = ctrl+grave
  
 [urgency_low]
-    background = "#ffffff"
-    foreground = "#595959"
+    background = "#1D1F28"
+    foreground = "#66FFFF"
     timeout = 5
  
 [urgency_normal]
-    background = "#ffffff"
-    foreground = "#595959"
+    background = "#1D1F28"
+    foreground = "#FFFFFF"
     timeout = 5
  
 [urgency_critical]
-    background = "#ffffff"
-    foreground = "#595959"
+    background = "#1D1F28"
+    foreground = "#FF6666"
     timeout = 5
  
 [Discord]
@@ -70,7 +71,7 @@
 [Slack]
     appname = *lack*
     format = "<b>%s</b>\n%b"
-    new_icon = Slack
+    new_icon = slack
  
 [WMail]
     appname = Electron

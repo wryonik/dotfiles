@@ -249,7 +249,7 @@ exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
-exec --no-startup-id feh --recursive --randomize --bg-fill /home/savitar/Pictures/wallpapers/ubuntu/Origin_of_nature_by_Julian_Tomasini.jpg
+exec --no-startup-id feh --recursive --randomize --bg-fill /home/savitar/Pictures/wallpapers/temple.jpg
 exec --no-startup-id libinput-gestures-setup start
 exec --no-startup-id i3-battery-popup -L 30 -N 
 exec --no-startup-id pasystray

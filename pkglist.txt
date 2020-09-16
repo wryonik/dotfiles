@@ -60,6 +60,7 @@ gnome-calculator
 gnome-disk-utility
 gnome-keyring
 gnome-video-effects
+go
 gobuster-git
 gotop
 gparted
@@ -84,6 +85,7 @@ jmtpfs
 john
 jre-openjdk
 jre8-openjdk
+kubectl
 lib32-faudio
 lib32-fontconfig
 lib32-freetype2
@@ -122,6 +124,7 @@ mariadb
 maven
 mesa-demos
 metasploit
+minikube
 mlocate
 mongodb-compass
 mtpfs
@@ -137,6 +140,7 @@ nethogs
 network-manager-applet
 networkmanager
 nginx
+nikto
 nmap
 ntp
 numix-icon-theme-git
@@ -182,6 +186,7 @@ redis
 rofi
 rrdtool
 run-parts
+rustscan
 scrot
 seahorse
 simplescreenrecorder
@@ -222,12 +227,14 @@ unzip
 vagrant
 vi
 vim
+virtualbox
 visual-studio-code-bin
 vlc
 vnstat
 wget
 wireless_tools
 wireshark-qt
+wpscan
 wxgtk2
 xbindkeys
 xf86-video-intel

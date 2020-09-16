@@ -174,3 +174,7 @@ export PROMPT_EOL_MARK=""
 
 source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 
+[ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"
+
+
+[[ -s "/home/savitar/.gvm/scripts/gvm" ]] && source "/home/savitar/.gvm/scripts/gvm"
