@@ -22,6 +22,8 @@ blueman
 brave-bin
 calcurse
 cheese
+cli-visualizer
+cmake
 cmatrix
 cpupower
 dialog
@@ -222,6 +224,7 @@ ttf-font-awesome-4
 ttf-joypixels
 ttf-opensans
 ttf-roboto
+ufw
 unrar
 unzip
 vagrant

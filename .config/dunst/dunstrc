@@ -51,12 +51,12 @@
 [urgency_normal]
     background = "#1D1F28"
     foreground = "#FFFFFF"
-    timeout = 5
+    timeout = 8
  
 [urgency_critical]
     background = "#1D1F28"
     foreground = "#FF6666"
-    timeout = 5
+    timeout = 8
  
 [Discord]
     appname = Discord
@@ -77,23 +77,19 @@
     appname = Electron
     format = "<b>%s</b>\n%b"
     new_icon = WMail
-    timeout = 2000
  
 [NCMPCPP]
     appname = mpc
     format = "<b>Now Playing:</b>\n%s\n%b"
     #format = "<b>%s</b>\n%b"
     new_icon = NCMPCPP
-    timeout = 10
 
 [spotify]
     appname = "Spotify AdKiller"
     format = "<b>Now Playing:</b>\n%s\n%b"
     #new_icon = Spotify
-    timeout = 10
  
 [Transmission]
     appname = Transmission
     format = "<b>%s</b>\n%b"
     new_icon = Transmission
-    timeout = 2000

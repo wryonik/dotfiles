@@ -99,8 +99,8 @@ set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:"
 set $ws4 "4:"
-set $ws5 "5:"
-set $ws6 "6:"
+set $ws6 "6:"
+set $ws5 "5:"
 set $ws7 "7:"
 set $ws8 "8"
 set $ws9 "9"
@@ -140,13 +140,13 @@ assign [class="Code"] $ws3
 assign [class="Org.gnome.Nautilus"] $ws4
 assign [class="Microsoft Teams - Preview"] $ws4
 assign [class="Subl3"] $ws3
-assign [class="vlc"] $ws5
+assign [class="vlc"] $ws6
 assign [class="X-terminal-emulator"] $ws1
 assign [class="Postman"] $ws4
-assign [class="TelegramDesktop"] $ws6
-assign [class="Slack"] $ws6
-assign [class="discord"] $ws6
-for_window [class="Spotify"] move --no-auto-back-and-forth to workspace $ws5
+assign [class="TelegramDesktop"] $ws5
+assign [class="Slack"] $ws5
+assign [class="discord"] $ws5
+for_window [class="Spotify"] move --no-auto-back-and-forth to workspace $ws6
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Microsoft Teams Notification"] floating enable
 
