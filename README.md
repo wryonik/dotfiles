@@ -5,6 +5,7 @@
 * Status Bar: polybar
 * Menu: rofi
 * Lock Screen: betterlockscreen
+* Wallpaper: [temple.jpg](./wallpapers/temple.jpg)
 
 Custom theme is used for spotify using spicetify-cli
 
