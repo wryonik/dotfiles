@@ -12,11 +12,11 @@ Custom theme is used for spotify using spicetify-cli
 
 ## Installation
 
+> Before running installation script, please go through [Instructions.md](./Instructions.md) first.
+
 For installing all the packages and copying dotfiles in suitable location, run
 
 ```./install.sh```
-
-> Add `backup.sh` script in `$HOME/scripts` folder else change the backup_dir in the script
 
 ## Screenshots
 

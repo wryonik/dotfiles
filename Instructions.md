@@ -1,28 +1,17 @@
-For brightness controls
+# Instructions
 
-make a xorg.conf file in /etc/X11/
+Run the `install.sh` script as root.
 
+* You may have to configure zsh for the first time.
 
-`
-Section "Device"
+* For proper working of [libinput-gestures](https://github.com/bulletmark/libinput-gestures), you must be a member of the input group to have permission to read the touchpad device:
 
-    Identifier  "0x42"
+    `sudo gpasswd -a $USER input`
 
-    Driver      "intel"
+* To enable tapping for touch on touchpad, use `xinput list <device_id>`
+> change the property_number (in my case it is 282) in config file
 
-    Option      "Backlight"  "intel_backlight"
+* To enable natural scrolling
+> change the property_number (in my case it is 282) in config file
 
-EndSection
-`
-
-To enable tapping for touch on touchpad
-
-use "xinput list <device_id>"
-
-change the property_number (in my case it is 282) in config file
-
-To enable natural scrolling
-
-change the property_number (in my case it is 282) in config file
-
-If nm-applet freezes, remove dunst. Also in the current setup, I had masked systemd-journal-flush.service, bluetooth.service so that it will not run on startup.
+* For backup script to work properly, add `backup.sh` script in `$HOME/scripts` folder else change the backup_dir in the script.
