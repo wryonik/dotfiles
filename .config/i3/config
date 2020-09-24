@@ -253,7 +253,7 @@ exec --no-startup-id feh --recursive --randomize --bg-fill /home/savitar/Picture
 exec --no-startup-id libinput-gestures-setup start
 exec --no-startup-id i3-battery-popup -L 30 -N 
 exec --no-startup-id pasystray
-exec_always compton -f
+exec_always compton --experimental-backends -f
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
@@ -267,7 +267,7 @@ bindsym --release Ctrl+Print exec scrot --clipboard $screenshot_file
 bindsym --release Ctrl+Shift+Print exec scrot --clipboard --select --selection-delay 300 $screenshot_file
 
 
-bindsym $mod+Shift+x exec betterlockscreen -l
+bindsym $mod+Shift+x exec betterlockscreen -l -t "Don't touch my machine"
 
 # Enable tapping from touchpad
 exec xinput set-prop 12 342 1 #see device_id and prop_id by xinput list
@@ -282,7 +282,7 @@ bindsym $mod+n  exec networkmanager_dmenu
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
-bindcode --release 248 exec betterlockscreen -l
+bindcode --release 248 exec betterlockscreen -l -t "Don't touch my machine"
 
 # Open calculator
 bindsym $mod+c exec gnome-calculator

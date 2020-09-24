@@ -168,7 +168,7 @@ php-pgsql
 php-sqlite
 phpmyadmin
 phppgadmin
-picom
+picom-git
 pkgconf
 pkgfile
 playerctl-git

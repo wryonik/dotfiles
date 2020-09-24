@@ -1,6 +1,5 @@
 [global_config]
   handle_size = 8
-  window_state = fullscreen
   tab_position = bottom
   inactive_color_offset = 0.704819277108
   suppress_multiple_term_dialog = True
