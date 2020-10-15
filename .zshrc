@@ -146,7 +146,7 @@ alias vpn_disconnect="sudo protonvpn disconnect"
 alias python="python2"
 alias pip="pip2"
 alias pacman_unlock="sudo rm /var/lib/pacman/db.lck"
-alias comp="cd ~/Documents/Shubham/SDS/cp/CP"
+alias comp="cd /home/savitar/Desktop/CP"
 alias config="vim ~/.config/i3/config"
 alias i3block="vim ~/.config/i3/i3blocks.conf"
 alias gs='git status '
@@ -178,3 +178,4 @@ source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 
 
 [[ -s "/home/savitar/.gvm/scripts/gvm" ]] && source "/home/savitar/.gvm/scripts/gvm"
+source /home/savitar/.oh-my-zsh/custom/themes/powerlevel10k/config/p10k-robbyrussell.zsh

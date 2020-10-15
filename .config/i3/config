@@ -221,7 +221,6 @@ gaps outer 10
 
 smart_gaps on
 
-border_radius 5
 
 #smart_borders enable
 new_window none
@@ -256,6 +255,8 @@ exec --no-startup-id pasystray
 exec_always compton --experimental-backends -f
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec slack
+exec telegram
 
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/powermenu.sh
 
