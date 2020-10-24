@@ -52,6 +52,7 @@ gcc
 gdb
 geckodriver
 gedit
+ghex
 ghidra
 ghostscript
 gimp
@@ -72,6 +73,7 @@ gst-plugins-bad
 gvfs-gphoto2
 gvfs-mtp
 hardcode-tray
+hexedit
 htop
 i3-battery-popup-git
 i3-gaps
@@ -92,7 +94,6 @@ libjson
 libmtp
 libofa
 libpaper
-libreoffice-still
 libspectre
 libtool
 liburcu
@@ -140,6 +141,7 @@ openbsd-netcat
 openssh
 openssl-1.0
 openvpn
+openvpn-protonvpn
 os-prober
 otf-font-awesome
 pacman-contrib
@@ -148,6 +150,7 @@ patch
 pavucontrol
 peek
 perl-clone
+perl-image-exiftool
 php
 php-gd
 php-pgsql
@@ -162,6 +165,7 @@ polybar
 postgresql
 postman-bin
 powertop
+protonvpn-cli-ng
 pulsemixer-git
 python-pip
 python2-pip
@@ -170,21 +174,21 @@ ramspeed
 ranger
 redis
 rofi
+rofi-emoji
 rrdtool
 run-parts
 rustscan
+rustup
 scrot
 seahorse
 simplescreenrecorder
 skypeforlinux-stable-bin
 slack-desktop
 slock
-speed-test
 spicetify-cli
 steghide
 strace
 stress
-sublime-text-dev
 sudo
 swh-plugins
 systemd-swap
@@ -218,11 +222,14 @@ vlc
 vnstat
 wget
 which
+whois
 wireless_tools
 wireshark-qt
+wps-office
 wpscan
 wxgtk2
 xbindkeys
+xclip
 xf86-video-intel
 xf86-video-nouveau
 xorg-bdftopcf
@@ -257,6 +264,7 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xsel
 xterm
 yay
 zathura
