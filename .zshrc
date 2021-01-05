@@ -143,8 +143,6 @@ alias l="ls"
 alias ll="ls -l"
 alias vpn_connect="sudo protonvpn c -f"
 alias vpn_disconnect="sudo protonvpn disconnect"
-alias python="python2"
-alias pip="pip2"
 alias pacman_unlock="sudo rm /var/lib/pacman/db.lck"
 alias comp="cd /home/savitar/Desktop/CP"
 alias config="vim ~/.config/i3/config"
@@ -163,7 +161,9 @@ alias gd="git diff | diff-so-fancy"
 alias ctf-tools="cd /home/savitar/Desktop/ctf-tools"
 alias thm="sudo openvpn /home/savitar/Downloads/axx.ovpn"
 alias htb="sudo openvpn /home/savitar/Downloads/axx8856-startingpoint.ovpn"
+alias csaw="sudo openvpn /home/savitar/Downloads/csaw365.conf"
 alias temp="code ~/temp1"
+alias nmapscan="/home/savitar/Desktop/ctf-tools/nmapAutomator/nmapAutomator.sh"
 
 ngrok_start() {
 	~/Downloads/ngrok-stable-linux-amd64/ngrok http $1 -host-header="localhost:$1"
@@ -179,3 +179,19 @@ source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 
 [[ -s "/home/savitar/.gvm/scripts/gvm" ]] && source "/home/savitar/.gvm/scripts/gvm"
 source /home/savitar/.oh-my-zsh/custom/themes/powerlevel10k/config/p10k-robbyrussell.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/savitar/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/savitar/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/savitar/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/savitar/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

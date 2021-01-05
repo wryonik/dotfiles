@@ -1,5 +1,5 @@
 [global_config]
-  handle_size = 8
+  handle_size = 1
   tab_position = bottom
   inactive_color_offset = 0.704819277108
   suppress_multiple_term_dialog = True
@@ -8,7 +8,7 @@
 [keybindings]
   split_horiz = <Primary><Shift>e
   split_vert = <Primary><Shift>d
-  close_window = <Primary><Shift>q
+  close_window = <Alt>F4
 [profiles]
   [[default]]
     background_darkness = 0.67

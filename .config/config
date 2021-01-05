@@ -1,0 +1,38 @@
+[tcp]
+tcp_server = on
+tcp_port = 46352
+
+[bluetooth]
+bluetooth_server = off
+
+# bluetooth_support_kitkat: enable bluetooth support for android 4.4 kitkat
+# this setting is important for everyone using bluetooth
+# you need to set this setting correctly otherwise it will not work
+# if you are using android 4.4 kitkat this needs to be turned on
+# because some cipher versions are not supported until after kitkat
+# if you are using android 5.0+ you need to keep this setting off
+bluetooth_support_kitkat = off
+
+[notification]
+# notification_timeout: display notification for this many seconds
+# set 0 to never expire
+# this setting might be completely ignored by your notification server
+notification_timeout = 8
+
+# list_size_duplicates: number of latest notifications to keep
+# integer 0-50, if a notification is in this list it will not be shown
+# set to 0 to disable
+list_size_duplicates = 0
+
+# ignore_duplicates_list_for_titles: notification titles that ignore duplicates list
+# comma-separated, case-sensitive
+ignore_duplicates_list_for_titles = AN2Linux, title
+
+# keywords_to_ignore: do not show notifications that include these keywords in the notification titles
+# comma-separated, case-sensitive. leading and trailing whitespace will be stripped.
+keywords_to_ignore =
+
+# regexes_to_ignore: do not show notifications who's contents or title match the following regexes
+regexes_to_ignore_in_title = 
+regexes_to_ignore_in_content = Checking, currently 
+

@@ -98,9 +98,9 @@ bindsym $mod+a focus parent
 set $ws1 "1:"
 set $ws2 "2:"
 set $ws3 "3:"
-set $ws4 "4:"
+set $ws4 "4:"
+set $ws5 "5:"
 set $ws6 "6:"
-set $ws5 "5:"
 set $ws7 "7:"
 set $ws8 "8"
 set $ws9 "9"
@@ -132,23 +132,32 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 assign [class="Terminator"] $ws1
 assign [class="URxvt"] $ws1
+for_window [workspace=$ws1 class="^(?!Terminator)$"] floating enable
+
+assign [class="X-terminal-emulator"] $ws1
 assign [class="firefox"] $ws2
 assign [class="Chromium"] $ws2
 assign [class="Brave-browser"] $ws2
 assign [class="Gedit"] $ws3
 assign [class="Code"] $ws3
-assign [class="Org.gnome.Nautilus"] $ws4
-assign [class="Microsoft Teams - Preview"] $ws4
 assign [class="Subl3"] $ws3
+assign [class="jetbrains-goland"] $ws3
+assign [class="Org.gnome.Nautilus"] $ws5
+assign [class="Microsoft Teams - Preview"] $ws5
+assign [class="dolphin"] $ws5
+assign [class="MongoDB Compass"] $ws5
+assign [class="Postman"] $ws5
+assign [class="TelegramDesktop"] $ws4
+assign [class="Slack"] $ws4
+assign [class="discord"] $ws4
 assign [class="vlc"] $ws6
-assign [class="X-terminal-emulator"] $ws1
-assign [class="Postman"] $ws4
-assign [class="TelegramDesktop"] $ws5
-assign [class="Slack"] $ws5
-assign [class="discord"] $ws5
 for_window [class="Spotify"] move --no-auto-back-and-forth to workspace $ws6
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Microsoft Teams Notification"] floating enable
+for_window [class="crx_ngceodoilcgpmkijopinlkmohnfifjfb"] floating enable
+for_window [class="Cisco AnyConnect Secure Mobility Client"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Tandem"] floating enable
 
 bindsym $mod+Tab workspace next_on_output
 bindsym $mod+shift+Tab workspace prev_on_output
@@ -254,11 +263,13 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id feh --recursive --randomize --bg-fill /home/savitar/Pictures/wallpapers/temple.jpg
 exec --no-startup-id libinput-gestures-setup start
 exec --no-startup-id i3-battery-popup -L 30 -N 
-exec --no-startup-id pasystray
+exec --no-startup-id kmix
+exec --no-startup-id albert
 exec_always compton --experimental-backends -f
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec slack
+exec brave
 
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/powermenu.sh
 
@@ -269,12 +280,17 @@ bindsym --release Shift+Print exec import ~/Pictures/Screenshots/"$(date +"%Y-%m
 bindsym --release Ctrl+Print exec scrot --clipboard $screenshot_file
 bindsym --release Ctrl+Shift+Print exec scrot --clipboard --select --selection-delay 300 $screenshot_file
 
+# lockscreen using betterlockscreen
+# bindsym $mod+Shift+x exec betterlockscreen -l -t "Don't touch my machine"
+# bindcode --release 248 exec betterlockscreen -l -t "Don't touch my machine"
 
-bindsym $mod+Shift+x exec betterlockscreen -l -t "Don't touch my machine"
+# lockscreen using script with i3lock
+bindsym $mod+Shift+x exec ~/scripts/lock.sh
+bindcode --release 248 exec ~/scripts/lock.sh
 
 # Enable tapping from touchpad
-exec xinput set-prop 12 342 1 #see device_id and prop_id by xinput list
-exec xinput set-prop 12 350 1
+exec xinput set-prop 12 347 1 #see device_id and prop_id by xinput list
+exec xinput set-prop 12 355 1
 
 # Dmenu for network-manager
 bindsym $mod+n  exec networkmanager_dmenu
@@ -283,7 +299,6 @@ bindsym $mod+n  exec networkmanager_dmenu
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
-bindcode --release 248 exec betterlockscreen -l -t "Don't touch my machine"
 
 # Open calculator
 bindsym $mod+c exec gnome-calculator
