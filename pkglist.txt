@@ -74,8 +74,6 @@ groff
 grub
 gsimplecal
 gst-plugins-bad
-gvfs-gphoto2
-gvfs-mtp
 hardcode-tray
 hashcat
 hexedit
@@ -87,6 +85,7 @@ i3blocks
 i3status
 ijs
 intel-ucode
+iotop
 jbig2dec
 jdk-openjdk
 jdk8-openjdk
@@ -148,6 +147,7 @@ nvidia
 nvidia-settings
 nvtop
 obs-studio
+obs-v4l2sink
 oniguruma
 openbsd-netcat
 opencl-nvidia
@@ -187,6 +187,7 @@ qt5ct
 qtkeychain-qt5
 ranger
 redis
+ripgrep
 rofi
 rofi-emoji
 rrdtool
@@ -196,6 +197,7 @@ rustup
 scrot
 seahorse
 shotwell
+signal-desktop
 slack-desktop
 slock
 spicetify-cli
@@ -230,6 +232,7 @@ tuned-git
 ufw
 unrar
 unzip
+v4l2loopback-dkms
 vagrant
 vi
 vim
