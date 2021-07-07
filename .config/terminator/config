@@ -4,7 +4,8 @@
   inactive_color_offset = 0.704819277108
   suppress_multiple_term_dialog = True
   title_use_system_font = False
-  title_font = MesloLGS NF 11
+  title_font = Comic Sans MS 11
+  case_sensitive = False
 [keybindings]
   split_horiz = <Primary><Shift>e
   split_vert = <Primary><Shift>d
@@ -14,16 +15,14 @@
     background_darkness = 0.67
     background_type = transparent
     cursor_color = "#aaaaaa"
-    font = Source Code Pro 10
+    font = Comic Sans MS 10
     foreground_color = "#ffffff"
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_lines = 5000
     palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
     login_shell = True
-    use_system_font = False
   [[asdf]]
-    background_type = transparent
     cursor_color = "#aaaaaa"
     show_titlebar = False
     scrollbar_position = hidden

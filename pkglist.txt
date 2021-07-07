@@ -85,6 +85,7 @@ pulseaudio
 qemu
 reflector
 rofi
+rsync
 slack-desktop
 sudo
 teams

@@ -23,7 +23,8 @@ background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #003cff
+# primary = #003cff (blue color)
+primary = #7c61dc
 secondary = #e60053
 alert = #bd2c40
 
@@ -59,7 +60,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=15;3
 
 modules-left = i3
 modules-center = 
-modules-right = xbacklight pulseaudio output-device memory cpu filesystem wlan-network-speed eth-network-speed battery date pac-update powermenu
+modules-right = xbacklight pulseaudio output-device memory cpu filesystem wlan-network-speed eth-network-speed battery date pac-update ipc-dunst powermenu
 
 tray-position = right
 tray-padding-left = 3
@@ -87,6 +88,11 @@ label = %title:0:30:...%
 type = custom/script
 exec = .config/polybar/scripts/polybar-protonvpn.sh
 interval = 5
+
+[module/webcam]
+type = custom/script
+exec = .config/polybar/scripts/webcam.sh
+interval = 3
 
 [module/filesystem]
 type = internal/fs
@@ -231,9 +237,18 @@ format-prefix-foreground = ${colors.foreground-alt}
 
 label =  %date% %time%
 
+
+[module/ipc-dunst]
+type = custom/ipc
+initial = 1
+hook-0 = echo "%{A1:dunstctl set-paused true && polybar-msg hook ipc-dunst 2:}%{A}" &
+hook-1 = echo "%{A1:dunstctl set-paused false && polybar-msg hook ipc-dunst 1:}%{F#ff2200}%{F-}%{A}" &
+
+
 [module/pulseaudio]
 type = internal/pulseaudio
 interval = 5
+click-right = pgrep pavucontrol && killall pavucontrol || pavucontrol
 
 format-volume = <label-volume> <bar-volume>
 label-volume =   
@@ -355,6 +370,7 @@ format-prefix = 
 type = custom/script
 exec = ~/.config/polybar/scripts/sound-output-device.sh
 interval = 3
+click-right = pgrep pavucontrol && killall pavucontrol || pavucontrol
 
 [module/wlan-network-speed]
 type= internal/network

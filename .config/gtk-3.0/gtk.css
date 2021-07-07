@@ -1,3 +1,17 @@
 
 @import 'colors.css';
 @import 'window_decorations.css';
+
+.thunar, .thunar .sidebar, .thunar .sidebar .view, .thunar .standard-view, .thunar .standard-view .view { filter: blur(8px) }
+
+* {
+	-ThunarAbstractIconView-row-spacing: 10;
+	-ThunarAbstractIconView-column-spacing: 20;
+}
+
+/* font path bar */
+.nemo-pathbar-button,
+NemoPathbarButton {
+    color: #ffffff;
+}
+

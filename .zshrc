@@ -119,16 +119,12 @@ source ~/.p10k.zsh
 
 export PATH="$PATH:/home/savitar/.gem/ruby/2.7.0/bin"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# for go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+alias nvm="unalias nvm; [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"; nvm $@"
+
 
 export GIT_EDITOR=vim
 
@@ -137,42 +133,34 @@ alias rankmirror="sudo rankmirrors -n 6 ./mirrorlist.backup > /etc/pacman.d/mirr
 alias gestures="libinput-gestures-setup restart"
 alias hs='history | grep'
 alias update_time="timedatectl set-ntp true"
-alias mera_status="git shortlog -s 2.1.0..upstream/master | sort -nr"
-alias paccache="sudo paccache -r"
 alias l="ls"
 alias ll="ls -l"
 alias vpn_connect="sudo protonvpn c -f"
 alias vpn_disconnect="sudo protonvpn disconnect"
-alias pacman_unlock="sudo rm /var/lib/pacman/db.lck"
 alias comp="cd /home/savitar/Desktop/CP"
 alias config="vim ~/.config/i3/config"
-alias i3block="vim ~/.config/i3/i3blocks.conf"
 alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gco='git checkout '
-alias gpl="git pull"
 alias commit="~/scripts/comp_commit.sh"
 alias rm='rm -i'
 alias chmod='chmod --preserve-root'
 alias chown='chown --preserve-root'
 alias gd="git diff | diff-so-fancy"
-alias ctf-tools="cd /home/savitar/Desktop/ctf-tools"
 alias thm="sudo openvpn /home/savitar/Downloads/axx.ovpn"
 alias htb="sudo openvpn /home/savitar/Downloads/axx8856-startingpoint.ovpn"
 alias csaw="sudo openvpn /home/savitar/Downloads/csaw365.conf"
 alias temp="code ~/temp1"
 alias nmapscan="/home/savitar/Desktop/ctf-tools/nmapAutomator/nmapAutomator.sh"
-
-ngrok_start() {
-	~/Downloads/ngrok-stable-linux-amd64/ngrok http $1 -host-header="localhost:$1"
-}
+alias ls="exa"
+alias mkdir="mkdir -p"
+alias stego-toolkit="docker run -it --rm -v $(pwd):/data dominicbreuker/stego-toolkit /bin/bash"
+alias ip="ip -c"
+alias pacfind="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
+alias yayfind="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
+alias code="code"
 
 setopt PROMPT_SP
+setopt noequals
 export PROMPT_EOL_MARK=""
-
-source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 
 [ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"
 
@@ -180,18 +168,8 @@ source /usr/share/zsh/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 [[ -s "/home/savitar/.gvm/scripts/gvm" ]] && source "/home/savitar/.gvm/scripts/gvm"
 source /home/savitar/.oh-my-zsh/custom/themes/powerlevel10k/config/p10k-robbyrussell.zsh
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/savitar/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/savitar/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/savitar/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/savitar/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
+# for go
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:/home/savitar/projects/rephrase.ai/Random/arcanist/bin/"
+export PATH="$PATH:/home/savitar/.local/MATLAB/R2021a/bin"
