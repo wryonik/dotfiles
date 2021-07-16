@@ -1,0 +1,79 @@
+* {
+    border:        none;
+    border-radius: 0;
+    /* font-family:   'FontAwesome', "Font Awesome 5 Free", "Font Awesome 5 Free Solid", "Font Awesome 5 Brands"; */
+    font-family:   'FontAwesome', "Source Code Pro Regular";
+    font-size:     14px;
+    font-weight: 500;
+    box-shadow:    none;
+    text-shadow:   none;
+    transition-duration: 0s;
+    margin-right: 2px;
+}
+
+window {
+    color:      #dfdfdf;
+    background: black;
+}
+
+window#waybar {
+    color:      #dfdfdf;
+    background: black;
+    margin-top: 2px;
+}
+
+#workspaces {
+    margin: 0 5px;
+}
+
+#workspaces button {
+    padding:    0 5px;
+    color:      rgba(217, 216, 216, 1);
+    font-size: 20px;
+    font-weight: bold;
+    min-width: 25px;
+}
+
+#workspaces button.visible {
+    color:      rgba(217, 216, 216, 1);
+}
+
+#workspaces button.focused {
+    border-top: 3px solid #7c61dc;
+    background-color: #444;
+}
+
+#workspaces button.urgent {
+    background-color:      #bd2c40;
+    color:      rgba(217, 216, 216, 1);
+}
+
+#mode, #battery, #cpu, #memory, #clock, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail {
+    margin:     0px 6px 0px 10px;
+    min-width:  25px;
+    
+}
+
+#mode {
+    font-size: 2rem;
+}
+
+#battery.warning {
+   color:       rgba(255, 210, 4, 1);
+}
+
+#battery.critical {
+    color:      rgba(238, 46, 36, 1);
+}
+
+#battery.charging {
+    color:      rgba(217, 216, 216, 1);
+}
+
+#custom-storage.warning {
+    color:      rgba(255, 210, 4, 1);
+}
+
+#custom-storage.critical {
+    color:      rgba(238, 46, 36, 1);
+}

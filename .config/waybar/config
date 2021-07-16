@@ -1,0 +1,106 @@
+{
+    "layer": "bottom",
+    "position": "bottom",
+    "height": 32,
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-right": ["pulseaudio", "memory", "cpu", "custom/storage/root", "custom/storage/home", "battery", "clock", "custom/pac-update", "custom/dunst", "custom/scratchpad_indicator", "tray"],
+    "sway/mode": {
+        "format": "{}"
+    },
+    "sway/workspaces": {
+        "format": "{name}",
+        "disable-scroll": true
+    },
+    "sway/window": {
+        "max-length": 80,
+        "tooltip": false
+    },
+    "clock": {
+        "interval": 1,
+        "format": "   {:%I:%M} ",
+        "format-alt": "   {:%a %d-%m-%Y    %I:%M:%S} ",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 2,
+        "format": "   {}%",
+        "max-length": 10
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "   {usage}%",
+        "max-length": 8
+    },
+    "battery": {
+        "format": " {icon}  {capacity}%",
+        "format-alt": " {icon}  {time}",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "   {capacity}%",
+        "interval": 30,
+        "states": {
+            "warning": 40,
+            "critical": 20
+        },
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": " {icon}  {volume}%",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", ""]
+        },
+        "scroll-step": 1,
+        "on-click-right": "pgrep pavucontrol && killall pavucontrol || pavucontrol",
+        "tooltip": false
+    },
+    "custom/storage/root": {
+        "format": "   {}B ",
+        "format-alt": "    {percentage}%",
+        "format-alt-click": "click-right",
+        "return-type": "json",
+        "interval": 60,
+        "exec": "~/.config/waybar/modules/storage.sh /"
+    },
+    "custom/storage/home": {
+        "format": "    {}B",
+        "format-alt": "    {percentage}%",
+        "format-alt-click": "click-right",
+        "return-type": "json",
+        "interval": 60,
+        "exec": "~/.config/waybar/modules/storage.sh /home"
+    },
+    "network": {
+        "interface": "wlo1",
+        "format": "{ifname}",
+        "format-wifi": "   {bandwidthDownBits}   {bandwidthUpBits} ",
+        "format-ethernet": " {bandwidthDownBits}   {bandwidthUpBits}  ",
+        "format-disconnected": "", //An empty format will hide the module.
+        "max-length": 50,
+        "interval": 1
+    },
+    "custom/pac-update": {
+        "format": "   {} ",
+        "exec": "checkupdates | wc -l",
+        "interval": 300
+    },
+    "custom/dunst": {
+        "format": "  {}  ",
+        "exec": "query=$(dunstctl is-paused); [[ $query == 'false'  ]] && echo '' || echo ''",
+        "on-click": "dunstctl set-paused toggle",
+        "interval": 1,
+        "signal": 1
+    },
+    "custom/scratchpad_indicator": {
+        "interval": 3,
+        "exec": "swaymsg -t get_tree | jq 'recurse(.nodes[]) | first(select(.name==\"__i3_scratch\")) | .floating_nodes | length | select(. >= 1)'",
+        "format": "   {}",
+        "on-click": "swaymsg 'scratchpad show'",
+        "on-click-right": "swaymsg 'move scratchpad'"
+     },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+}

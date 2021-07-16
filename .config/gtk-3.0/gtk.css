@@ -15,3 +15,8 @@ NemoPathbarButton {
     color: #ffffff;
 }
 
+NemoWindow .sidebar .view {
+background-color: #3F3F3F; /* to change dark grey background color of sidebar*/
+color: #000000; /* to change normal text color in sidebar */
+}
+

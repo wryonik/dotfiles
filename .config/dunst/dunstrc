@@ -13,7 +13,7 @@
     ##transparency = 25
     transparency = 0
     idle_threshold = 120
-    monitor = 0
+    monitor = 0 
     follow = mouse
     sticky_history = yes
     line_height = 5
