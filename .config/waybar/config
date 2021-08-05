@@ -4,7 +4,7 @@
     "height": 33,
 
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-right": ["pulseaudio", "pulseaudio#sink", "memory", "cpu", "custom/storage/root", "custom/storage/home", "custom/network", "battery", "clock", "custom/pac-update", "custom/dunst", "custom/scratchpad_indicator", "tray"],
+    "modules-right": ["pulseaudio", "pulseaudio#source", "memory", "cpu", "custom/storage/root", "custom/storage/home", "custom/network", "battery", "clock", "custom/pac-update", "custom/dunst", "custom/scratchpad_indicator", "tray"],
     "sway/mode": {
         "format": "{}"
     },
@@ -48,8 +48,6 @@
     },
     "pulseaudio": {
         "format": " {icon}  {volume}%",
-        "format-source": "",
-        "format-source-muted": "",
         "format-muted": "",
         "format-icons": {
             "headphone": "",
@@ -60,13 +58,14 @@
         "on-click-right": "pgrep pavucontrol && killall pavucontrol || pavucontrol",
         "tooltip": false
     },
-    "pulseaudio#sink": {
+    "pulseaudio#source": {
         "format": "{format_source}",
-        "format-source": "",
+        "format-source": " {volume}%",
         "format-source-muted": "",
-        "scroll-step": 1,
         "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
         "on-click-right": "pgrep pavucontrol && killall pavucontrol || pavucontrol",
+        "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -1%",
+        "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +1%",
         "tooltip": false
     },
     "custom/storage/root": {
