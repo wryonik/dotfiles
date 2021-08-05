@@ -27,9 +27,9 @@ window#waybar {
 }
 
 #workspaces button {
-    padding:    0 5px;
+    padding:    0 7px;
     color:      rgba(217, 216, 216, 1);
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     min-width: 25px;
 }
@@ -39,7 +39,8 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    border-top: 3px solid #7c61dc;
+    padding-top: 2px;
+    border-bottom: 3px solid #7c61dc;
     background-color: #444;
 }
 
@@ -48,10 +49,14 @@ window#waybar {
     color:      rgba(217, 216, 216, 1);
 }
 
+#mode label {
+    color:      rgba(217, 216, 216, 1);
+    font-size: 12px;
+}
+
 #mode, #battery, #cpu, #memory, #clock, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-spotify, #custom-weather, #custom-mail {
     margin:     0px 6px 0px 10px;
     min-width:  25px;
-    
 }
 
 #mode {
@@ -60,6 +65,7 @@ window#waybar {
 
 #battery.warning {
    color:       rgba(255, 210, 4, 1);
+   background-color: black;
 }
 
 #battery.critical {
@@ -67,7 +73,7 @@ window#waybar {
 }
 
 #battery.charging {
-    color:      rgba(217, 216, 216, 1);
+    color:      #fff;
 }
 
 #custom-storage.warning {

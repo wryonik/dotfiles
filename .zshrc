@@ -156,8 +156,9 @@ alias stego-toolkit="docker run -it --rm -v $(pwd):/data dominicbreuker/stego-to
 alias ip="ip -c"
 alias pacfind="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias yayfind="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
-alias code="code"
+alias code="code --ozone-platform=wayland --enable-features=UseOzonePlatform"
 alias env-reset="systemctl --user import-environment DISPLAY"
+alias public_ip="curl ifconfig.me"
 
 setopt PROMPT_SP
 setopt noequals
@@ -172,6 +173,7 @@ source /home/savitar/.oh-my-zsh/custom/themes/powerlevel10k/config/p10k-robbyrus
 # for go
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:/home/savitar/scripts"
 export PATH="$PATH:/home/savitar/projects/rephrase.ai/Random/arcanist/bin/"
 export PATH="$PATH:/home/savitar/.local/MATLAB/R2021a/bin"
 

@@ -1,16 +1,15 @@
 {
     "layer": "bottom",
     "position": "bottom",
-    "height": 32,
+    "height": 33,
 
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-right": ["pulseaudio", "memory", "cpu", "custom/storage/root", "custom/storage/home", "battery", "clock", "custom/pac-update", "custom/dunst", "custom/scratchpad_indicator", "tray"],
+    "modules-right": ["pulseaudio", "pulseaudio#sink", "memory", "cpu", "custom/storage/root", "custom/storage/home", "custom/network", "battery", "clock", "custom/pac-update", "custom/dunst", "custom/scratchpad_indicator", "tray"],
     "sway/mode": {
         "format": "{}"
     },
     "sway/workspaces": {
-        "format": "{name}",
-        "disable-scroll": true
+        "format": " {name}",
     },
     "sway/window": {
         "max-length": 80,
@@ -25,33 +24,48 @@
     "memory": {
         "interval": 2,
         "format": "   {}%",
-        "max-length": 10
     },
     "cpu": {
         "interval": 2,
-        "format": "   {usage}%",
-        "max-length": 8
+        "format": "  {usage}%",
+    },
+    "custom/network": {
+        "format": "   {} ",
+        "interval": 1,
+        "exec": "~/.config/waybar/modules/bandwidth"
     },
     "battery": {
         "format": " {icon}  {capacity}%",
-        "format-alt": " {icon}  {time}",
+        "format-alt": " {icon}  {power} Wh",
         "format-icons": ["", "", "", "", ""],
         "format-charging": "   {capacity}%",
-        "interval": 30,
+        "interval": 60,
         "states": {
             "warning": 40,
             "critical": 20
         },
-        "tooltip": false
+        "tooltip-format": "{timeTo}"
     },
     "pulseaudio": {
         "format": " {icon}  {volume}%",
+        "format-source": "",
+        "format-source-muted": "",
         "format-muted": "",
         "format-icons": {
             "headphone": "",
             "default": ["", ""]
         },
         "scroll-step": 1,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pgrep pavucontrol && killall pavucontrol || pavucontrol",
+        "tooltip": false
+    },
+    "pulseaudio#sink": {
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "scroll-step": 1,
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
         "on-click-right": "pgrep pavucontrol && killall pavucontrol || pavucontrol",
         "tooltip": false
     },
@@ -100,7 +114,7 @@
         "on-click-right": "swaymsg 'move scratchpad'"
      },
     "tray": {
-        "icon-size": 21,
+        "icon-size": 15,
         "spacing": 10
     }
 }

@@ -305,7 +305,7 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 # Open calculator
 bindsym $mod+c exec gnome-calculator
-bindsym $mod+b exec brave --enable-features=VaapiVideoDecoder --enable-zero-copy --use-gl=desktop --enable-gpu-rasterization --ignore-gpu-blocklist --disable-gpu-driver-bug-workarounds
+bindsym $mod+b exec brave --enable-features=VaapiVideoDecoder --enable-zero-copy --use-gl=desktop --enable-gpu-rasterization --ignore-gpu-blocklist
 
 # Changes the default window title to only class name
 for_window [class=".*"] title_format "%class"

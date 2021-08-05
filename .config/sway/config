@@ -135,9 +135,9 @@ assign [app_id="URxvt"] $ws1
 for_window [workspace=$ws1 app_id="^(?!Terminator)$"] floating enable
 
 assign [app_id="terminator"] $ws1
-assign [class="firefox"] $ws2
-assign [class="Brave-browser"] $ws2
-assign [class="Code"] $ws3
+assign [app_id="firefox"] $ws2
+assign [app_id="Brave-browser"] $ws2
+assign [app_id="Code"] $ws3
 assign [app_id="nemo"] $ws4
 assign [class="Microsoft Teams - Preview"] $ws5
 assign [class="Postman"] $ws4
@@ -251,30 +251,30 @@ bindsym XF86MonBrightnessDown exec light -U 5
 
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id gnome-settings-daemon
-exec --no-startup-id nm-applet
 # exec --no-startup-id blueman-applet
 
 exec --no-startup-id libinput-gestures-setup start
 # exec_always picom --experimental-backends
 # exec_always picom
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec --no-startup-id nm-applet --indicator
 
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/powermenu.sh
 
 # Print screen
 set $screenshot_file '~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S-$wx$h.png'
-bindsym Print exec import -window root ~/Pictures/Screenshots/"$(date +"%Y-%m-%d_%H-%M-%S-$wx$h.png")"
-bindsym --release Shift+Print exec import ~/Pictures/Screenshots/"$(date +"%Y-%m-%d_%H-%M-%S-$wx$h.png")"
-bindsym --release Ctrl+Print exec scrot --clipboard $screenshot_file
-bindsym --release Ctrl+Shift+Print exec scrot --clipboard --select --selection-delay 300 $screenshot_file
+bindsym Print exec grimshot --notify save screen
+bindsym --release Shift+Print exec grimshot --notify save area
+bindsym --release Ctrl+Print exec grimshot --notify copy screen
+bindsym --release Ctrl+Shift+Print exec grimshot --notify copy area
 
 # lockscreen using betterlockscreen
 # bindsym $mod+Shift+x exec betterlockscreen -l -t "Don't touch my machine"
 # bindcode --release 248 exec betterlockscreen -l -t "Don't touch my machine"
 
-# lockscreen using script with i3lock
+# lockscreen using script with swaylock
 bindsym $mod+Shift+x exec swaylock -f -i /home/savitar/Pictures/wallpapers/6hd67inudpx61.png
-bindcode --release 248 exec swaylock -f -i /home/savitar/Pictures/wallpapers/6hd67inudpx61.png
+# bindcode --release 248 exec swaylock -f -i /home/savitar/Pictures/wallpapers/6hd67inudpx61.png
 
 # Enable tapping from touchpad
 exec xinput set-prop 12 346 1 #see device_id and prop_id by xinput list
@@ -286,7 +286,7 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 # Open calculator
 bindsym $mod+c exec gnome-calculator
-bindsym $mod+b exec brave --ignore-gpu-blocklist --enable-gpu-rasterization --enable-zero-copy --use-gl=egl --enable-features=VaapiVideoDecoder --enable-features=UseOzonePlatform --ozone-platform=wayland --disable-gpu-driver-bug-workarounds
+bindsym $mod+b exec brave --ignore-gpu-blocklist --enable-gpu-rasterization --enable-zero-copy --use-gl=egl --enable-features=VaapiVideoDecoder --enable-features=UseOzonePlatform --ozone-platform=wayland
 
 # Changes the default window title to only class name
 for_window [class=".*"] title_format "%class"
@@ -304,9 +304,12 @@ for_window [class=".*"] title_format "%class"
 for_window [app_id=".*"] title_format "%app_id"
 
 exec swayidle -w \
-    timeout 300 'swaylock -f -c 000000' \
+    timeout 550 'swaylock -f -i /home/savitar/Pictures/wallpapers/6hd67inudpx61.png \
     timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -f -c 000000'
+    before-sleep 'swaylock -f -i /home/savitar/Pictures/wallpapers/6hd67inudpx61.png
+
+exec swayidle -w before-sleep 'swaylock -f -i /home/savitar/Pictures/wallpapers/6hd67inudpx61.png'
+
 
 
 # Scratchpad:
@@ -328,3 +331,20 @@ exec "systemctl --user import-environment"
 bindsym ctrl+space exec dunstctl close
 bindsym ctrl+shift+space exec dunstctl close-all
 bindsym ctrl+grave exec dunstctl history-pop
+
+
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always ~/.config/sway/scripts/import-gsettings \
+    gtk-theme:deepin \
+    icon-theme:bloom \
+    cursor-theme:bloom
+
+input * xkb_numlock enable
+
+exec systemctl --user import-environment XDG_SESSION_TYPE XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment WAYLAND_DISPLAY
+
+output * adaptive_sync on
+
+tiling_drag disable
