@@ -144,6 +144,7 @@ assign [class="X-terminal-emulator"] $ws1
 assign [class="firefox"] $ws2
 assign [class="Chromium"] $ws2
 assign [class="Brave-browser"] $ws2
+assign [class="Brave"] $ws2
 assign [class="Gedit"] $ws3
 assign [class="Code"] $ws3
 assign [class="Subl3"] $ws3
@@ -275,7 +276,7 @@ exec --no-startup-id feh --recursive --randomize --bg-fill /home/savitar/Picture
 exec --no-startup-id libinput-gestures-setup start
 exec_always picom --experimental-backends
 # exec_always picom
-exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/powermenu.sh
@@ -288,8 +289,8 @@ bindsym --release Ctrl+Print exec scrot --clipboard $screenshot_file
 bindsym --release Ctrl+Shift+Print exec scrot --clipboard --select --selection-delay 300 $screenshot_file
 
 # lockscreen using betterlockscreen
-bindsym $mod+Shift+x exec betterlockscreen -l -t "Don't touch my machine"
-bindcode --release 248 exec betterlockscreen -l -t "Don't touch my machine"
+bindsym $mod+Shift+x exec betterlockscreen -l
+bindcode --release 248 exec betterlockscreen -l
 
 # lockscreen using script with i3lock
 # bindsym $mod+Shift+x exec ~/scripts/lock.sh
@@ -305,7 +306,7 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 # Open calculator
 bindsym $mod+c exec gnome-calculator
-bindsym $mod+b exec brave --enable-features=VaapiVideoDecoder --enable-zero-copy --use-gl=desktop --enable-gpu-rasterization --ignore-gpu-blocklist
+bindsym $mod+b exec brave --enable-zero-copy --use-gl=desktop --enable-gpu-rasterization --ignore-gpu-blocklist
 
 # Changes the default window title to only class name
 for_window [class=".*"] title_format "%class"

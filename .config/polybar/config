@@ -60,7 +60,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=15;3
 
 modules-left = i3
 modules-center = 
-modules-right = xbacklight pulseaudio output-device memory cpu filesystem wlan-network-speed eth-network-speed battery date pac-update ipc-dunst
+modules-right = xbacklight pulseaudio output-device input-device memory cpu filesystem wlan-network-speed eth-network-speed battery date pac-update ipc-dunst
 
 tray-position = right
 tray-padding-left = 3
@@ -380,6 +380,25 @@ type = custom/script
 exec = ~/.config/polybar/scripts/sound-output-device.sh
 interval = 3
 click-right = pgrep pavucontrol && killall pavucontrol || pavucontrol
+
+[module/input-device]
+type = custom/script
+interval = 1
+exec = ~/.config/polybar/scripts/sound-input.sh
+click-right = pgrep pavucontrol && killall pavucontrol || pavucontrol
+click-left = pactl set-source-mute @DEFAULT_SOURCE@ toggle
+scroll-up = pactl set-source-volume @DEFAULT_SOURCE@ +1%
+scroll-down = pactl set-source-volume @DEFAULT_SOURCE@ -1%
+
+
+[module/input-device_ipc]
+type = custom/ipc
+exec = ~/.config/polybar/scripts/sound-input.sh
+click-right = pgrep pavucontrol && killall pavucontrol || pavucontrol
+click-left = pactl set-source-mute @DEFAULT_SOURCE@ toggle
+scroll-up = pactl set-source-volume @DEFAULT_SOURCE@ +1%
+scroll-down = pactl set-source-volume @DEFAULT_SOURCE@ -1%
+
 
 [module/wlan-network-speed]
 type= internal/network

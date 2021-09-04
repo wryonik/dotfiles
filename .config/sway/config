@@ -263,10 +263,10 @@ bindsym $mod+p exec --no-startup-id ~/.config/rofi/scripts/powermenu.sh
 
 # Print screen
 set $screenshot_file '~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S-$wx$h.png'
-bindsym Print exec grimshot --notify save screen
-bindsym --release Shift+Print exec grimshot --notify save area
-bindsym --release Ctrl+Print exec grimshot --notify copy screen
-bindsym --release Ctrl+Shift+Print exec grimshot --notify copy area
+bindsym --release Print exec /home/savitar/scripts/grimshot --notify save screen
+bindsym --release Shift+Print exec /home/savitar/scripts/grimshot --notify save area
+bindsym --release Ctrl+Print exec /home/savitar/scripts/grimshot --notify copy screen
+bindsym --release Ctrl+Shift+Print exec /home/savitar/scripts/grimshot --notify copy area
 
 # lockscreen using betterlockscreen
 # bindsym $mod+Shift+x exec betterlockscreen -l -t "Don't touch my machine"

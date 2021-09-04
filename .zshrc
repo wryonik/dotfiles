@@ -137,7 +137,7 @@ alias l="ls"
 alias ll="ls -l"
 alias vpn_connect="sudo protonvpn c -f"
 alias vpn_disconnect="sudo protonvpn disconnect"
-alias comp="cd /home/savitar/Desktop/CP"
+alias comp="code /home/savitar/Desktop/CP"
 alias config="vim ~/.config/i3/config"
 alias gs='git status '
 alias commit="~/scripts/comp_commit.sh"
@@ -156,7 +156,7 @@ alias stego-toolkit="docker run -it --rm -v $(pwd):/data dominicbreuker/stego-to
 alias ip="ip -c"
 alias pacfind="pacman -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S"
 alias yayfind="yay -Slq | fzf --multi --preview 'yay -Si {1}' | xargs -ro yay -S"
-alias code="code --ozone-platform=wayland --enable-features=UseOzonePlatform"
+#alias code="code --ozone-platform=wayland --enable-features=UseOzonePlatform"
 alias env-reset="systemctl --user import-environment DISPLAY"
 alias public_ip="curl ifconfig.me"
 

@@ -5,7 +5,6 @@
   suppress_multiple_term_dialog = True
   title_use_system_font = False
   title_font = Comic Sans MS 11
-  case_sensitive = False
 [keybindings]
   split_horiz = <Primary><Shift>e
   split_vert = <Primary><Shift>d

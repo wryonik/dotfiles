@@ -43,7 +43,7 @@
     padding: 16;
     border: 0 0 0 0;
     border-color: @separatorcolor;
-    background-color: @backgroundcoloralternate;
+    background-color: #ffffff;
 }
 
 #element.selected.normal {
@@ -55,15 +55,7 @@
     border-color: @separatorcolor;
 }
 
-#element.alternate.normal {
-    background-color: @backgroundcoloralternate;
-}
-
 #element.normal.active {
-    background-color: #434c5e;
-}
-
-#element.alternate.active {
     background-color: #434c5e;
 }
 

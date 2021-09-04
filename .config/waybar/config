@@ -23,7 +23,7 @@
     },
     "memory": {
         "interval": 2,
-        "format": "   {}%",
+        "format": "  {}%",
     },
     "cpu": {
         "interval": 2,
@@ -60,7 +60,7 @@
     },
     "pulseaudio#source": {
         "format": "{format_source}",
-        "format-source": " {volume}%",
+        "format-source": "  {volume}%",
         "format-source-muted": "",
         "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
         "on-click-right": "pgrep pavucontrol && killall pavucontrol || pavucontrol",
