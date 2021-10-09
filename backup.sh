@@ -1,6 +1,6 @@
 #!/bin/bash
 
-backup_dir="/home/savitar/dotfiles"
+backup_dir="/home/$USER/dotfiles"
 config_folder="$HOME/.config"
 
 declare -a HOME_FILES=(".zshrc" ".Xresources")
