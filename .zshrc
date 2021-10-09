@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/savitar/.oh-my-zsh"
+export ZSH="/home/${USER}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -109,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#######################    SAVITAR    ######################################
+#######################    ${USER}    ######################################
 
 # for autocompletion and syntax-highlighting
 
@@ -117,7 +117,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.p10k.zsh
 
-export PATH="$PATH:/home/savitar/.gem/ruby/2.7.0/bin"
+export PATH="$PATH:/home/${USER}/.gem/ruby/2.7.0/bin"
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -137,7 +137,7 @@ alias l="ls"
 alias ll="ls -l"
 alias vpn_connect="sudo protonvpn c -f"
 alias vpn_disconnect="sudo protonvpn disconnect"
-alias comp="code /home/savitar/Desktop/CP"
+alias comp="code /home/${USER}/Desktop/CP"
 alias config="vim ~/.config/i3/config"
 alias gs='git status '
 alias commit="~/scripts/comp_commit.sh"
@@ -145,11 +145,11 @@ alias rm='rm -i'
 alias chmod='chmod --preserve-root'
 alias chown='chown --preserve-root'
 alias gd="git diff | diff-so-fancy"
-alias thm="sudo openvpn /home/savitar/Downloads/axx.ovpn"
-alias htb="sudo openvpn /home/savitar/Downloads/axx8856-startingpoint.ovpn"
-alias csaw="sudo openvpn /home/savitar/Downloads/csaw365.conf"
+alias thm="sudo openvpn /home/${USER}/Downloads/axx.ovpn"
+alias htb="sudo openvpn /home/${USER}/Downloads/axx8856-startingpoint.ovpn"
+alias csaw="sudo openvpn /home/${USER}/Downloads/csaw365.conf"
 alias temp="code ~/temp1"
-alias nmapscan="/home/savitar/Desktop/ctf-tools/nmapAutomator/nmapAutomator.sh"
+alias nmapscan="/home/${USER}/Desktop/ctf-tools/nmapAutomator/nmapAutomator.sh"
 alias ls="exa"
 alias mkdir="mkdir -p"
 alias stego-toolkit="docker run -it --rm -v $(pwd):/data dominicbreuker/stego-toolkit /bin/bash"
@@ -167,15 +167,15 @@ export PROMPT_EOL_MARK=""
 [ "$XDG_CURRENT_DESKTOP" = "KDE" ] || [ "$XDG_CURRENT_DESKTOP" = "GNOME" ] || export QT_QPA_PLATFORMTHEME="qt5ct"
 
 
-[[ -s "/home/savitar/.gvm/scripts/gvm" ]] && source "/home/savitar/.gvm/scripts/gvm"
-source /home/savitar/.oh-my-zsh/custom/themes/powerlevel10k/config/p10k-robbyrussell.zsh
+[[ -s "/home/${USER}/.gvm/scripts/gvm" ]] && source "/home/${USER}/.gvm/scripts/gvm"
+source /home/${USER}/.oh-my-zsh/custom/themes/powerlevel10k/config/p10k-robbyrussell.zsh
 
 # for go
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$PATH:/home/savitar/scripts"
-export PATH="$PATH:/home/savitar/projects/rephrase.ai/Random/arcanist/bin/"
-export PATH="$PATH:/home/savitar/.local/MATLAB/R2021a/bin"
+export PATH="$PATH:/home/${USER}/scripts"
+export PATH="$PATH:/home/${USER}/projects/rephrase.ai/Random/arcanist/bin/"
+export PATH="$PATH:/home/${USER}/.local/MATLAB/R2021a/bin"
 
 
 # Defer initialization of nvm until nvm, node or a node-dependent command is
