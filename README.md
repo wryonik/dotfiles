@@ -29,3 +29,7 @@ For installing all the packages and copying dotfiles in suitable location, run
 
 LockScreen
 ![alt text](./images/pic4.png)
+
+Made with **khoon**, **paseena** and **love** `:-)` by
+
+Shubham ([wryonik](https://github.com/wryonik))
